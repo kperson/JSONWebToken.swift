@@ -13,7 +13,7 @@ extension HMACAlgorithm: SignAlgorithm, VerifyAlgorithm {
       result = []
     }
 
-    return Data(bytes: result)
+    return Data(result)
   }
 }
 
