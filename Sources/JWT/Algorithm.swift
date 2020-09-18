@@ -16,6 +16,8 @@ public enum Algorithm: CustomStringConvertible {
 
   /// HMAC using SHA-512 hash algorithm
   case hs512(Data)
+    
+  case es256(Data)
 
   var algorithm: SignAlgorithm {
     switch self {
@@ -27,6 +29,8 @@ public enum Algorithm: CustomStringConvertible {
       return HMACAlgorithm(key: key, hash: .sha384)
     case .hs512(let key):
       return HMACAlgorithm(key: key, hash: .sha512)
+    case .es256(let key):
+        return ES256CAlgorithm(key: key)
     }
   }
 

@@ -3,3 +3,4 @@ xcuserdata/
 .build/
 Packages/
 JWT.xcodeproj/
+.DS_Store
